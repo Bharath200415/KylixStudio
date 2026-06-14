@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="bg-[var(--bg)] pt-[160px] lg:pt-[55px] md:pt-[120px] pb-[80px] lg:pb-[60px] relative overflow-hidden min-h-[90vh] flex items-center">
+    <section className="bg-[var(--bg)] pt-[95px] lg:pt-[55px] md:pt-[120px] pb-[80px] lg:pb-[60px] relative overflow-hidden min-h-[90vh] flex items-center">
       <div className="max-w-full w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] flex flex-col lg:grid lg:grid-cols-[45%_55%] items-center relative z-10 gap-12 lg:gap-16">
         <div className="w-full text-left">
           <div className="inline-block px-4 py-1.5 rounded-full bg-[#111] text-white font-mono text-[10px] tracking-widest uppercase mb-5 animate-[fadeUp_0.7s_ease-out_0.1s_both]">
@@ -45,14 +45,14 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[450px] lg:h-[600px] xl:h-[700px] relative overflow-hidden flex gap-4 animate-[fadeUp_0.9s_ease-out_0.35s_both]" style={{ maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 85%, transparent)', WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)' }}>
+        <div className="md:w-full w-[300px] h-[450px] lg:h-[600px] xl:h-[700px] relative overflow-hidden flex gap-4 animate-[fadeUp_0.9s_ease-out_0.35s_both]" style={{ maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 85%, transparent)', WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)' }}>
            
            {/* Left Column (Scrolls Up) */}
-           <div className="w-1/2 flex flex-col gap-4 animate-[scrollYReverse_30s_linear_infinite]">
+           <div className="w-1/2 flex flex-col gap-4 animate-[scrollYReverse_20s_linear_infinite]">
              {[...Array(2)].map((_, i) => (
                <div key={`left-${i}`} className="flex flex-col gap-4">
                  {/* Kinect */}
-                 <div className="w-full h-[240px] md:h-[280px] bg-gradient-to-b from-gray-800 via-orange-800 to-orange-500 rounded-[32px] overflow-hidden relative group">
+                 <div className="w-full h-[170px] md:h-[280px] bg-gradient-to-b from-gray-800 via-orange-800 to-orange-500 rounded-[25px] overflow-hidden relative group">
                    <div className="absolute inset-0 mix-blend-overlay opacity-60 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center"></div>
                    <div className="absolute inset-0 flex items-center justify-center">
                      <span className="text-white font-sans font-medium tracking-tight text-3xl flex items-center gap-2">
@@ -62,7 +62,7 @@ export default function Hero() {
                    </div>
                  </div>
                  {/* Fugitive */}
-                 <div className="w-full h-[260px] md:h-[300px] bg-[#1a4bcf] rounded-[32px] overflow-hidden relative group">
+                 <div className="w-full h-[170px] md:h-[300px] bg-[#1a4bcf] rounded-[25px] overflow-hidden relative group">
                    <div className="absolute inset-0 mix-blend-overlay opacity-50 bg-[url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center saturate-200 contrast-150 grayscale"></div>
                    <div className="absolute inset-0 flex items-center justify-center z-10">
                      <span className="text-white font-sans font-medium text-[26px] flex items-center gap-2">
@@ -72,7 +72,7 @@ export default function Hero() {
                    </div>
                  </div>
                  {/* Off+Grid */}
-                 <div className="w-full h-[320px] md:h-[360px] bg-[#0A0A0A] rounded-[32px] overflow-hidden relative group p-8 flex flex-col justify-end items-center">
+                 <div className="w-full h-[170px] md:h-[360px] bg-[#0A0A0A] rounded-[25px] overflow-hidden relative group p-8 flex flex-col justify-end items-center">
                     <div className="w-[140px] h-[220px] bg-[#161616] rounded-xl border border-[#222] shadow-2xl relative flex flex-col items-center justify-center mt-auto mb-4">
                        <div className="absolute top-4 left-4 font-sans text-white text-[9px] max-w-[80px] leading-tight text-left text-gray-400">Fund your card with any crypto in seconds no waiting.</div>
                        <div className="w-10 h-10 border-[3px] border-white rounded-[10px] mt-8"></div>
@@ -84,18 +84,18 @@ export default function Hero() {
            </div>
 
            {/* Right Column (Scrolls Up Slower or scrolling down) */}
-           <div className="w-1/2 flex flex-col gap-4 animate-[scrollY_45s_linear_infinite] mt-[-150px]">
+           <div className="w-1/2 flex flex-col gap-4 animate-[scrollY_20s_linear_infinite] mt-[-150px]">
              {[...Array(2)].map((_, i) => (
                <div key={`right-${i}`} className="flex flex-col gap-4">
                  {/* Menu/SCROLL */}
-                 <div className="w-full h-[200px] md:h-[220px] bg-gradient-to-br from-[#2a1a10] to-black rounded-[32px] overflow-hidden relative group p-6">
+                 <div className="w-full h-[200px] md:h-[220px] bg-gradient-to-br from-[#2a1a10] to-black rounded-[25px] overflow-hidden relative group p-6">
                    <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[12px] px-4 py-2 rounded-[14px] flex items-center font-sans">
                      Menu <span className="ml-2 bg-white/20 px-1.5 rounded text-[10px] font-mono leading-none py-0.5">+</span>
                    </div>
                    <div className="absolute bottom-6 right-6 font-display italic text-white/50 text-xl font-bold tracking-widest">SCROLL</div>
                  </div>
                  {/* Forget the system */}
-                 <div className="w-full h-[280px] md:h-[320px] bg-gradient-to-b from-[#111] to-[#000] rounded-[32px] overflow-hidden relative group">
+                 <div className="w-full h-[280px] md:h-[320px] bg-gradient-to-b from-[#111] to-[#000] rounded-[25px] overflow-hidden relative group">
                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center opacity-30 mix-blend-luminosity"></div>
                    <div className="absolute top-6 left-6 z-10">
                      <h3 className="text-white font-sans text-[22px] leading-[1.1] font-medium max-w-[180px] tracking-tight">Forget the system<br/>Own your freedom</h3>
@@ -103,7 +103,7 @@ export default function Hero() {
                    <div className="absolute right-6 top-6 text-white/60 text-[10px] font-sans">Off+Grid</div>
                  </div>
                  {/* Lumibuild Studio */}
-                 <div className="w-full h-[280px] md:h-[320px] bg-[#1a4bcf] rounded-[32px] overflow-hidden relative group flex items-center justify-center">
+                 <div className="w-full h-[170px] md:h-[320px] bg-[#1a4bcf] rounded-[25px] overflow-hidden relative group flex items-center justify-center">
                    <span className="text-white font-sans font-medium text-2xl flex items-center gap-3">
                      <span className="grid gap-[3px] grid-cols-2 grid-rows-2">
                        <span className="w-2.5 h-2.5 border-[2px] border-white block"></span>
