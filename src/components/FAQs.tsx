@@ -26,7 +26,7 @@ export default function FAQs() {
         <div>
           <h2 className="font-display font-extrabold text-[44px] md:text-[56px] leading-[1.05] tracking-tight text-[var(--dark)]">
             Questions<br/>
-            <span className="italic font-light">answered</span>
+            <span className="text-[var(--accent)] font-bold italic">answered</span>
           </h2>
         </div>
         <div className="border-t border-[#EAEAEA]">

@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-[var(--bg)]/60 backdrop-blur-lg py-4 shadow-sm' : 'bg-transparent py-8'}`}>
+      <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-[var(--bg)]/60 backdrop-blur-lg py-4 shadow-sm' : 'bg-transparent py-5'}`}>
         <div className="max-w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] flex justify-between items-center">
           <a href="/" className="font-display font-bold text-2xl tracking-tight text-[var(--dark)] no-underline flex items-center">
             Kylix Studio<sup className="text-sm font-sans mt-2 ml-0.5">®</sup>

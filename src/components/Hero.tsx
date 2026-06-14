@@ -2,19 +2,19 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="bg-[var(--bg)] pt-[160px] lg:pt-[110px] md:pt-[120px] pb-[80px] lg:pb-[60px] relative overflow-hidden min-h-[90vh] flex items-center">
+    <section className="bg-[var(--bg)] pt-[160px] lg:pt-[55px] md:pt-[120px] pb-[80px] lg:pb-[60px] relative overflow-hidden min-h-[90vh] flex items-center">
       <div className="max-w-full w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] flex flex-col lg:grid lg:grid-cols-[45%_55%] items-center relative z-10 gap-12 lg:gap-16">
         <div className="w-full text-left">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-[#111] text-white font-mono text-[10px] tracking-widest uppercase mb-8 animate-[fadeUp_0.7s_ease-out_0.1s_both]">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-[#111] text-white font-mono text-[10px] tracking-widest uppercase mb-5 animate-[fadeUp_0.7s_ease-out_0.1s_both]">
             // OPEN FOR PROJECTS //
           </div>
-          <h1 className="font-display font-extrabold text-[48px] md:text-[64px] lg:text-[72px] xl:text-[88px] leading-[1.05] tracking-[-0.03em] text-[var(--dark)] animate-[fadeUp_0.8s_ease-out_0.25s_both]">
-            We build<br/>things that convert.<br/>
+          <h1 className="font-display font-extrabold text-[48px] md:text-[64px] lg:text-[72px] xl:text-[88px] leading-[0.95] tracking-[-0.03em] text-[var(--dark)] animate-[fadeUp_0.8s_ease-out_0.25s_both]">
+            We build<br/>things that <span className='text-neutral-400'>convert</span><span className='text-[var(--accent)]'>.</span><br/>
           </h1>
-          <p className="font-sans font-medium text-[18px] md:text-[20px] leading-[1.6] text-[var(--muted)] max-w-[440px] mt-6 mb-10 animate-[fadeUp_0.7s_ease-out_0.4s_both]">
+          <p className="font-sans font-medium text-[18px] md:text-[20px] leading-[1.6] text-[var(--muted)] max-w-[440px] mt-6 mb-8 animate-[fadeUp_0.7s_ease-out_0.4s_both]">
             Branding, websites, and digital products <br/> designed to drive growth.
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 mb-10 animate-[fadeUp_0.7s_ease-out_0.5s_both]">
+          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 mb-8 animate-[fadeUp_0.7s_ease-out_0.5s_both]">
             <a href="#contact" className="inline-flex items-center justify-center bg-[var(--accent)] text-white rounded-full px-8 py-[16px] font-sans font-bold text-[15px] transition-all duration-300 hover:opacity-90 hover:scale-105">
               Book a Call <span className="ml-2 bg-white text-[var(--accent)] rounded-full w-6 h-6 flex items-center justify-center" dangerouslySetInnerHTML={{__html: '&rarr;'}}></span>
             </a>
