@@ -6,8 +6,9 @@ export default function Footer() {
     <footer className="bg-[#111] border-t border-[#1C1C1C] pt-20 pb-12">
       <div className="max-w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-12 scroll-reveal text-left">
         <div>
-          <span className="font-display font-bold text-[32px] text-white flex items-center mb-6">
-            Kylix Studio<sup className="text-sm font-sans mt-2 ml-0.5">®</sup>
+          <span className="font-display font-bold text-[32px] text-white flex items-center gap-2 mb-6">
+            <img src="/logo.svg" alt="Kylix Studio Logo" className="w-9 h-9" style={{ filter: 'brightness(0) invert(1)' }} />
+            <span>Kylix Studio<sup className="text-sm font-sans mt-2 ml-0.5">®</sup></span>
           </span>
           <p className="font-sans font-medium text-[15px] leading-[1.6] text-gray-400 max-w-[280px]">Craft-first brand &amp; development partner for ambitious startups.</p>
           <div className="mt-8 flex gap-4">

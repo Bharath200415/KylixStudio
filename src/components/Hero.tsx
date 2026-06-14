@@ -5,11 +5,11 @@ export default function Hero() {
     <section className="bg-[var(--bg)] pt-[95px] lg:pt-[55px] md:pt-[120px] pb-[80px] lg:pb-[60px] relative overflow-hidden min-h-[90vh] flex items-center">
       <div className="max-w-full w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] flex flex-col lg:grid lg:grid-cols-[45%_55%] items-center relative z-10 gap-12 lg:gap-16">
         <div className="w-full text-left">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-[#111] text-white font-mono text-[10px] tracking-widest uppercase mb-5 animate-[fadeUp_0.7s_ease-out_0.1s_both]">
-            // OPEN FOR PROJECTS //
+          <div className="inline-block px-4 py-2 rounded-full bg-neutral-700 text-white font-display text-[10px] tracking-widest font-bold uppercase mb-5 animate-[fadeUp_0.7s_ease-out_0.1s_both]">
+            ✽ OPEN FOR PROJECTS ✽
           </div>
-          <h1 className="font-display font-extrabold text-[48px] md:text-[64px] lg:text-[72px] xl:text-[88px] leading-[0.95] tracking-[-0.03em] text-[var(--dark)] animate-[fadeUp_0.8s_ease-out_0.25s_both]">
-            We build<br />things that <span className='text-neutral-400'>convert</span><span className='text-[var(--accent)]'>.</span><br />
+          <h1 className="font-display font-extrabold text-[48px] md:text-[64px] lg:text-[77px] leading-[0.95] tracking-[-0.03em] text-[#121212] animate-[fadeUp_0.8s_ease-out_0.25s_both]">
+            We Build<br />Things That <span className='text-neutral-400'>Convert</span><span className='text-[var(--accent)]'>.</span><br />
           </h1>
           <p className="font-sans font-medium text-[18px] md:text-[20px] leading-[1.6] text-[var(--muted)] max-w-[440px] mt-6 mb-8 animate-[fadeUp_0.7s_ease-out_0.4s_both]">
             Branding, websites, and digital products <br /> designed to drive growth.

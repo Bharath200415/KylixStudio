@@ -21,8 +21,9 @@ export default function Navbar() {
     <>
       <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-[var(--bg)]/60 backdrop-blur-lg py-4 shadow-sm' : 'bg-transparent py-5'}`}>
         <div className="max-w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] flex justify-between items-center">
-          <a href="/" className="font-display font-bold text-2xl tracking-tight text-[var(--dark)] no-underline flex items-center">
-            Kylix Studio<sup className="text-sm font-sans mt-2 ml-0.5">®</sup>
+          <a href="/" className="font-display font-bold text-2xl tracking-tight text-[var(--dark)] no-underline flex items-center gap-2">
+            <img src="/logo.svg" alt="Kylix Studio Logo" className="w-[34px] h-[34px] md:w-9 md:h-9" />
+            <span className="hidden sm:inline-block -mt-0.5">Kylix Studio<sup className="text-sm font-sans mt-2 ml-0.5">®</sup></span>
           </a>
           <ul className="hidden lg:flex gap-10 list-none">
             <li><a href="/#services" className="font-sans font-medium text-[15px] text-[var(--dark)] hover:text-[var(--accent)] transition-colors duration-200">Services</a></li>
@@ -47,8 +48,8 @@ export default function Navbar() {
             className="fixed inset-0 bg-white z-[200] flex flex-col p-6"
           >
             <div className="flex justify-between items-center mb-12">
-              <a href="/" className="font-display font-extrabold text-2xl tracking-tight text-[var(--dark)] no-underline flex items-center" onClick={() => setMobileMenuOpen(false)}>
-                 Kylix Studio<sup className="text-sm font-sans mt-2 ml-0.5">®</sup>
+              <a href="/" className="font-display font-extrabold text-2xl tracking-tight text-[var(--dark)] no-underline flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+                <img src="/logo.svg" alt="Kylix Studio Logo" className="w-8 h-8" />
               </a>
               <button className="bg-transparent border-none cursor-pointer text-[var(--dark)]" onClick={() => setMobileMenuOpen(false)}>
                 <X className="w-8 h-8" strokeWidth={1} />
