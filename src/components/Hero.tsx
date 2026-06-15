@@ -1,6 +1,9 @@
 import React from 'react';
+import { FlipWords } from './ui/flip-words';
+
 
 export default function Hero() {
+  const words = ["Convert", "Scale", "Grow"];
   return (
     <section className="bg-[var(--bg)] pt-[102px] lg:pt-[55px] md:pt-[123px] pb-[80px] lg:pb-[60px] relative overflow-hidden min-h-[90vh] flex items-center">
       <div className="max-w-full w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] flex flex-col lg:grid lg:grid-cols-[45%_55%] items-center relative z-10 gap-12 lg:gap-16">
@@ -9,7 +12,7 @@ export default function Hero() {
             ✽ OPEN FOR PROJECTS ✽
           </div>
           <h1 className="font-display font-extrabold text-[50px] md:text-[64px] lg:text-[77px] leading-[0.96] tracking-[-0.05em] md:tracking-[-0.03em] text-[#121212] animate-[fadeUp_0.8s_ease-out_0.25s_both]">
-            We Build<br />Things That <span className='text-neutral-400'>Convert</span><span className='text-[var(--accent)]'>.</span><br />
+            We Build<br />Things That<br className="sm:hidden"/><FlipWords words={words} className='text-neutral-400 dark:text-neutral-400'/><span className='text-[var(--accent)] dark:text-[var(--accent)] -ml-3'>.</span><br />
           </h1>
           <p className="font-sans font-medium text-[15px] md:text-[20px] leading-[1.6] text-[var(--muted)] max-w-[440px] mt-6 mb-8 animate-[fadeUp_0.7s_ease-out_0.4s_both]">
             Branding, websites, and <br className="sm:hidden" />digital products <br className="hidden sm:inline" /> designed to drive growth.
