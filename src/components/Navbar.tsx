@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-[var(--bg)]/60 backdrop-blur-lg py-4 shadow-sm' : 'bg-transparent py-5'}`}>
         <div className="max-w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] flex justify-between items-center">
           <a href="/" className="font-display font-bold text-2xl tracking-tight text-[var(--dark)] no-underline flex items-center gap-2">
-            <img src="/logo.svg" alt="Kylix Studio Logo" className="w-[34px] h-[34px] md:w-9 md:h-9" />
+            <img src="/logo.svg" alt="Kylix Studio Logo" className="w-[34px] h-[34px] md:w-9 md:h-9 " />
             <span className="hidden sm:inline-block -mt-0.5">Kylix Studio<sup className="text-sm font-sans mt-2 ml-0.5">®</sup></span>
           </a>
           <ul className="hidden lg:flex gap-10 list-none">
