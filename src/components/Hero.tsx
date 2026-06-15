@@ -8,7 +8,7 @@ export default function Hero() {
           <div className="inline-block px-4 py-2 rounded-full bg-neutral-900 text-white font-display text-[10px] tracking-widest font-bold uppercase mb-5 animate-[fadeUp_0.7s_ease-out_0.1s_both]">
             ✽ OPEN FOR PROJECTS ✽
           </div>
-          <h1 className="font-display font-extrabold text-[45px] md:text-[64px] lg:text-[77px] leading-[0.96] tracking-[-0.05em] md:tracking-[-0.03em] text-[#121212] animate-[fadeUp_0.8s_ease-out_0.25s_both]">
+          <h1 className="font-display font-extrabold text-[50px] md:text-[64px] lg:text-[77px] leading-[0.96] tracking-[-0.05em] md:tracking-[-0.03em] text-[#121212] animate-[fadeUp_0.8s_ease-out_0.25s_both]">
             We Build<br />Things That <span className='text-neutral-400'>Convert</span><span className='text-[var(--accent)]'>.</span><br />
           </h1>
           <p className="font-sans font-medium text-[15px] md:text-[20px] leading-[1.6] text-[var(--muted)] max-w-[440px] mt-6 mb-8 animate-[fadeUp_0.7s_ease-out_0.4s_both]">
