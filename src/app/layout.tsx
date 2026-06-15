@@ -19,6 +19,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo-white.svg",
   },
+  openGraph: {
+    images: [
+      {
+        url: "/OGimage.png",
+        width: 1200,
+        height: 630,
+        alt: "Kylix Studio - Creative Design and Development Agency",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
