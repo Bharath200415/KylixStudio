@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kylix Studio",
-  description: "We build things that convert. A design and development agency based in Bangalore, India.",
+  title: "Kylix Studio - Creative Design and Development Agency",
+  description: "We build things that convert. A creative design and development agency based in Bangalore, India.",
+  icons: {
+    icon: "/logo-white.svg",
+  },
 };
 
 export default function RootLayout({
