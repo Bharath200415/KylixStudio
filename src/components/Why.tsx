@@ -17,7 +17,7 @@ function EndToEndCard() {
   ];
 
   return (
-    <div ref={containerRef} className="lg:col-span-2 bg-[#FBFCFB] rounded-[16px] p-8 md:p-10 flex flex-col justify-between min-h-[360px] lg:min-h-[420px] relative transition-colors duration-300 hover:bg-white border border-[#EAEAEA] overflow-hidden group">
+    <div ref={containerRef} className="lg:col-span-2 bg-[#FBFCFB] rounded-[16px] p-8 md:p-10 flex flex-col justify-between min-h-[360px] lg:min-h-[420px] relative transition-colors duration-300 hover:bg-white border border-[#EAEAEA] overflow-hidden group hover:shadow-md shadow-neutral-400">
       <div className="relative z-10 max-w-full lg:max-w-[500px]">
         <h3 className="font-display font-extrabold text-[28px] md:text-[36px] leading-[1.1] text-[var(--dark)] mb-4 tracking-tight">
           End-to-End<br/>Execution
@@ -100,7 +100,7 @@ function EndToEndCard() {
 
 export default function Why() {
   return (
-    <section id="why" className="py-20 md:py-[100px] bg-[var(--bg)]">
+    <section id="why" className="py-20 md:py-[100px] bg-[var(--bg)] ">
       <div className="max-w-full w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] relative">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-12 scroll-reveal">
           <div>
@@ -124,7 +124,7 @@ export default function Why() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
             
             {/* Card 1: Build For Growth */}
-            <div className="lg:col-span-2 bg-[#FBFCFB] rounded-[16px] p-8 md:p-10 flex flex-col justify-start min-h-[360px] lg:min-h-[420px] relative transition-colors duration-300 hover:bg-white border border-[#EAEAEA] overflow-hidden group">
+            <div className="lg:col-span-2 hover:shadow-md shadow-neutral-400 bg-[#FBFCFB] rounded-[16px] p-8 md:p-10 flex flex-col justify-start min-h-[360px] lg:min-h-[420px] relative transition-colors duration-300 hover:bg-white border border-[#EAEAEA] overflow-hidden group">
               <div className="relative z-10 max-w-[320px] md:max-w-[400px]">
                 <h3 className="font-display font-extrabold text-[28px] md:text-[36px] leading-[1.1] text-[var(--dark)] mb-4 tracking-tight">
                   Build For Growth,<br/>Not Just Looks
@@ -195,7 +195,7 @@ export default function Why() {
             </div>
 
             {/* Card 2: 48-Hour Turnarounds */}
-            <div className="lg:col-span-1 bg-[#FBFCFB] rounded-[16px] p-8 md:p-10 flex flex-col justify-start min-h-[360px] lg:min-h-[420px] relative transition-colors duration-300 hover:bg-white border border-[#EAEAEA] overflow-hidden group">
+            <div className="lg:col-span-1 hover:shadow-md shadow-neutral-400 bg-[#FBFCFB] rounded-[16px] p-8 md:p-10 flex flex-col justify-start min-h-[360px] lg:min-h-[420px] relative transition-colors duration-300 hover:bg-white border border-[#EAEAEA] overflow-hidden group">
               <div className="relative z-10 mb-32 lg:mb-0">
                 <h3 className="font-display font-bold text-[24px] md:text-[28px] leading-[1.1] text-[var(--dark)] mb-3 tracking-tight">
                   48-Hour<br/>Turnarounds
@@ -238,7 +238,7 @@ export default function Why() {
             </div>
 
             {/* Card 3: Founder-Focused */}
-            <div className="lg:col-span-1 bg-[#FBFCFB] rounded-[16px] p-8 md:p-10 flex flex-col justify-start min-h-[360px] lg:min-h-[420px] relative transition-colors duration-300 hover:bg-white border border-[#EAEAEA] overflow-hidden group">
+            <div className="lg:col-span-1 hover:shadow-md shadow-neutral-400 bg-[#FBFCFB] rounded-[16px] p-8 md:p-10 flex flex-col justify-start min-h-[360px] lg:min-h-[420px] relative transition-colors duration-300 hover:bg-white border border-[#EAEAEA] overflow-hidden group">
               <div className="relative z-10 mb-32 lg:mb-0">
                 <h3 className="font-display font-bold text-[24px] md:text-[28px] leading-[1.1] text-[var(--dark)] mb-3 tracking-tight">
                   Founder<br/>Focused
