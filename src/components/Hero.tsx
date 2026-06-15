@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="bg-[var(--bg)] pt-[120px] lg:pt-[55px] md:pt-[123px] pb-[80px] lg:pb-[60px] relative overflow-hidden min-h-[90vh] flex items-center">
+    <section className="bg-[var(--bg)] pt-[115px] lg:pt-[55px] md:pt-[123px] pb-[80px] lg:pb-[60px] relative overflow-hidden min-h-[90vh] flex items-center">
       <div className="max-w-full w-full mx-auto px-6 md:px-10 lg:px-[60px] xl:px-[80px] flex flex-col lg:grid lg:grid-cols-[45%_55%] items-center relative z-10 gap-12 lg:gap-16">
         <div className="w-full text-left">
           <div className="inline-block px-4 py-2 rounded-full bg-neutral-900 text-white font-display text-[10px] tracking-widest font-bold uppercase mb-5 animate-[fadeUp_0.7s_ease-out_0.1s_both]">
