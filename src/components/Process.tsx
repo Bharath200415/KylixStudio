@@ -26,6 +26,7 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="py-12 md:py-[80px]">
+      
       <div className="max-w-full w-full mx-auto px-6 md:px-16 relative scroll-reveal">
         <span className="hidden md:block absolute left-8 bottom-0 font-mono text-[11px] text-[#EAEAEA] [writing-mode:vertical-rl] rotate-180 tracking-[0.1em]">05</span>
         <h2 className="font-display italic text-[40px] md:text-[52px] leading-[1.1]"><span className="not-italic font-semibold font-sans">How we </span><em>work</em></h2>
