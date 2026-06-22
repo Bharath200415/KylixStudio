@@ -5,9 +5,44 @@ import { motion, AnimatePresence } from 'motion/react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
+
 export default function Contact() {
   const [isBudgetOpen, setIsBudgetOpen] = useState(false);
   const [budget, setBudget] = useState("");
+  const [formData, setFormData] = useState({
+  name: "",
+  company: "",
+  email: "",
+  website: "",
+  projectInfo: "",
+  timeline: ""
+});
+
+  const handleSubmit = async () => {
+  const selectedServices = Object.entries(services)
+    .filter(([_, value]) => value)
+    .map(([key]) => key);
+
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      ...formData,
+      services: selectedServices,
+      budget
+    })
+  });
+
+  const data = await res.json();
+
+  if (data.success) {
+    alert("Enquiry sent successfully!");
+  } else {
+    alert("Something went wrong");
+  }
+};
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -61,7 +96,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column (Form) */}
-          <div className="w-full max-w-[640px] flex flex-col gap-12 bg-white rounded-3xl p-8 md:p-12 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.05)] border border-gray-100">
+          <div className="w-full max-w-[640px] shadow-lg shadow-neutral-300 flex flex-col gap-12 bg-white rounded-3xl p-8 md:p-12 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.05)] border border-gray-100">
             
             {/* Contact Details Section */}
             <section className="flex flex-col gap-6">
@@ -74,6 +109,13 @@ export default function Contact() {
                 <input 
                   type="text" 
                   placeholder="Jane Smith" 
+                    value={formData.name}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      name: e.target.value,
+                    })
+                  }
                   className="w-full bg-[var(--bg)] border border-transparent focus:border-[var(--accent)] outline-none rounded-xl px-5 py-4 font-sans font-medium text-[15px] text-[var(--dark)] placeholder:text-gray-400 transition-colors focus:shadow-[0_0_0_4px_rgba(0,85,255,0.1)]"
                 />
               </div>
@@ -82,7 +124,11 @@ export default function Contact() {
                 <label className="font-sans text-[12px] uppercase tracking-widest text-[var(--muted)] font-bold">Company Name*</label>
                 <input 
                   type="text" 
-                  placeholder="Acme Corporation" 
+                  placeholder="Acme Corporation"
+                  value={formData.company}
+                  onChange={(e) =>
+                    setFormData({ ...formData, company: e.target.value })
+                  } 
                   className="w-full bg-[var(--bg)] border border-transparent focus:border-[var(--accent)] outline-none rounded-xl px-5 py-4 font-sans font-medium text-[15px] text-[var(--dark)] placeholder:text-gray-400 transition-colors focus:shadow-[0_0_0_4px_rgba(0,85,255,0.1)]"
                 />
               </div>
@@ -92,6 +138,10 @@ export default function Contact() {
                 <input 
                   type="email" 
                   placeholder="jane@acme.com" 
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   className="w-full bg-[var(--bg)] border border-transparent focus:border-[var(--accent)] outline-none rounded-xl px-5 py-4 font-sans font-medium text-[15px] text-[var(--dark)] placeholder:text-gray-400 transition-colors focus:shadow-[0_0_0_4px_rgba(0,85,255,0.1)]"
                 />
               </div>
@@ -101,6 +151,10 @@ export default function Contact() {
                 <input 
                   type="url" 
                   placeholder="www.acme.com" 
+                  value={formData.website}
+                  onChange={(e) =>
+                    setFormData({ ...formData, website: e.target.value })
+                  }
                   className="w-full bg-[var(--bg)] border border-transparent focus:border-[var(--accent)] outline-none rounded-xl px-5 py-4 font-sans font-medium text-[15px] text-[var(--dark)] placeholder:text-gray-400 transition-colors focus:shadow-[0_0_0_4px_rgba(0,85,255,0.1)]"
                 />
               </div>
@@ -114,6 +168,10 @@ export default function Contact() {
               <textarea 
                 placeholder="What does your company do? How long have you been in business? What are your goals for this collaboration?"
                 rows={5}
+                value={formData.projectInfo}
+                onChange={(e) =>
+                  setFormData({ ...formData, projectInfo: e.target.value })
+                }
                 className="w-full bg-[var(--bg)] border border-transparent focus:border-[var(--accent)] outline-none rounded-xl px-5 py-4 font-sans font-medium text-[15px] text-[var(--dark)] placeholder:text-gray-400 transition-colors resize-y focus:shadow-[0_0_0_4px_rgba(0,85,255,0.1)]"
               ></textarea>
             </section>
@@ -215,11 +273,15 @@ export default function Contact() {
               <input 
                 type="text" 
                 placeholder="Share the launch date or timeline" 
+                value={formData.timeline}
+                onChange={(e) =>
+                  setFormData({ ...formData, timeline: e.target.value })
+                }
                 className="w-full bg-[var(--bg)] border border-transparent focus:border-[var(--accent)] outline-none rounded-xl px-5 py-4 font-sans font-medium text-[15px] text-[var(--dark)] placeholder:text-gray-400 transition-colors focus:shadow-[0_0_0_4px_rgba(0,85,255,0.1)]"
               />
             </section>
 
-            <button className="mt-4 self-start bg-[var(--dark)] text-white font-sans font-bold text-[16px] px-10 py-[18px] rounded-full hover:bg-[var(--accent)] transition-all duration-300 w-full md:w-auto">
+            <button onClick={handleSubmit} className="mt-4 self-start bg-[var(--dark)] text-white font-sans font-bold text-[16px] px-10 py-[18px] rounded-full hover:bg-[var(--accent)] transition-all duration-300 w-full md:w-auto">
               Send Enquiry
             </button>
 

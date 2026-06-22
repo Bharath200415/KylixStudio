@@ -18,15 +18,15 @@ export default function Hero() {
             Branding, websites, and <br className="sm:hidden" />digital products <br className="hidden sm:inline" /> designed to drive growth.
           </p>
           <div className="flex flex-row gap-2.5 sm:gap-3 mb-8 w-full max-w-[340px] sm:max-w-none sm:w-fit animate-[fadeUp_0.7s_ease-out_0.5s_both]">
-            <a href="#contact" className="flex-1 sm:flex-initial inline-flex items-center justify-center bg-linear-to-b from-[var(--accent)] via-blue-600 to-blue-200 text-white rounded-full pl-4 pr-2 py-2.5 sm:pl-5 sm:pr-2 sm:py-[9px] font-display font-bold text-[14px] sm:text-[17px] transition-all duration-300 
+            <a href="#contact" className="flex-1 sm:flex-initial inline-flex items-center justify-center bg-linear-to-b from-[var(--accent)] via-blue-600 to-blue-200 text-white rounded-full pl-4 pr-2 py-4 sm:pl-5 sm:pr-2 sm:py-[7px] font-display font-bold text-[14px] sm:text-[17px] transition-all duration-300 
             transition-all duration-200 active:scale-98 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.2)_inset] ring ring-white/20 ring-inset ring-offset-2 ring-offset-primary hover:shadow-[0px_0px_20px_0px_rgba(255,255,255,0.4)_inset] hover:ring-white/40 whitespace-nowrap">
-              Book a Call <span className="ml-2 sm:ml-3 bg-neutral-50 text-blue-500 rounded-full w-7 h-7 sm:w-11 sm:h-11 flex items-center justify-center shrink-0">
+              Book a Call <span className="ml-2 sm:ml-3 bg-neutral-50 text-blue-500 rounded-full w-7 h-7 sm:w-11 sm:h-11 flex items-center justify-center shrink-0  ">
                 <svg className="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z" fill="#0055FF"></path>
                 </svg>
               </span>
             </a>
-            <a href="#contact" className="flex-1 sm:flex-initial inline-flex items-center justify-center bg-black text-neutral-50 rounded-full pl-4 pr-2 py-2.5 sm:pl-5 sm:pr-2 sm:py-[9px] font-display font-bold text-[14px] sm:text-[17px] transition-all duration-300 
+            <a href="#contact" className="flex-1 sm:flex-initial inline-flex items-center justify-center bg-black text-neutral-50 rounded-full pl-4 pr-2 py-4 sm:pl-5 sm:pr-2 sm:py-[7px] font-display font-bold text-[14px] sm:text-[17px] transition-all duration-300 
             transition-all duration-200 active:scale-98 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.4)_inset] ring ring-black/10 ring-inset ring-offset-2 ring-offset-neutral-100 hover:shadow-[0px_0px_20px_0px_rgba(255,255,255,0.6)_inset] hover:ring-black/20 whitespace-nowrap">
               Get in touch <span className="ml-2 sm:ml-3 bg-linear-to-b from-[var(--accent)] via-blue-600 to-blue-200 text-white rounded-full w-7 h-7 sm:w-11 sm:h-11 flex items-center justify-center shrink-0">
                 <svg className="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
