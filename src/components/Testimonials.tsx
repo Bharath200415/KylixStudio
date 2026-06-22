@@ -88,8 +88,8 @@ export default function Testimonials() {
           {/* Right side: 2x2 grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
             {reviews.map((r, i) => (
-              <div key={i} className="bg-[#EBEBEB] border border-[#E0E0E0] rounded-[32px] p-8 flex flex-col justify-between min-h-[300px] transition-all hover:bg-white">
-                <div>
+              <div key={i} className="bordergrad shadow-xs bg-gradient-to-b from-[#FAFAFA] to-[#F4F4F5] rounded-[32px] p-8 flex flex-col justify-between min-h-[300px] transition-all hover:bg-white">
+                <div className=''>
                   <div className="flex items-center gap-1.5 mb-8">
                     <span className="font-sans font-bold text-[13px] text-[var(--dark)]">{r.rating}</span>
                     <span className="text-[var(--accent)] text-[12px]">★</span>
