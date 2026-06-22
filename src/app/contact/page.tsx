@@ -9,6 +9,7 @@ import Footer from '../../components/Footer';
 export default function Contact() {
   const [isBudgetOpen, setIsBudgetOpen] = useState(false);
   const [budget, setBudget] = useState("");
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
   name: "",
   company: "",
@@ -19,28 +20,63 @@ export default function Contact() {
 });
 
   const handleSubmit = async () => {
+    if (
+    !formData.name ||
+    !formData.email ||
+    !formData.company ||
+    !formData.projectInfo ||
+    !formData.timeline
+  ){
+    alert("Please fill all required fields");
+    return;
+  }
+  setLoading(true);
   const selectedServices = Object.entries(services)
     .filter(([_, value]) => value)
     .map(([key]) => key);
+  try{
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        ...formData,
+        services: selectedServices,
+        budget
+      })
+    });
 
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      ...formData,
-      services: selectedServices,
-      budget
-    })
-  });
-
-  const data = await res.json();
+    const data = await res.json();
+  
 
   if (data.success) {
     alert("Enquiry sent successfully!");
+    setFormData({
+      name: "",
+      company: "",
+      email: "",
+      website: "",
+      projectInfo: "",
+      timeline: ""
+    });
+    setBudget("");
+    setServices({
+      positioning: false,
+      identity: false,
+      webDesign: false,
+      webDev: false,
+      other: false,
+      notSure: false
+    });
   } else {
     alert("Something went wrong");
+  }
+  } catch (error) {
+  console.error(error);
+  alert("Failed to send enquiry");
+  }finally{
+    setLoading(false);
   }
 };
 
@@ -281,8 +317,8 @@ export default function Contact() {
               />
             </section>
 
-            <button onClick={handleSubmit} className="mt-4 self-start bg-[var(--dark)] text-white font-sans font-bold text-[16px] px-10 py-[18px] rounded-full hover:bg-[var(--accent)] transition-all duration-300 w-full md:w-auto">
-              Send Enquiry
+            <button onClick={handleSubmit} disabled={loading} className="mt-4 self-start bg-[var(--dark)] text-white font-sans font-bold text-[16px] px-10 py-[18px] rounded-full hover:bg-[var(--accent)] transition-all duration-300 w-full md:w-auto">
+              {loading ? "Sending..." : "Send Enquiry"}
             </button>
 
           </div>
